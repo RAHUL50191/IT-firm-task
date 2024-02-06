@@ -7,7 +7,7 @@
     text-align: center;
 
 }
-.serviceCArd-container{
+.serviceCard-container{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;

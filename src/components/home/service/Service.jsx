@@ -5,7 +5,7 @@ export default function Service() {
   return (
     <section className='services-container'>
         <div className='service-title'>Services:</div>
-        <div className='serviceCArd-container'>
+        <div className='serviceCard-container'>
     <ServiceCard
           icon={<i className="fa fa-desktop"></i>}
           serviceName="Web Development"
