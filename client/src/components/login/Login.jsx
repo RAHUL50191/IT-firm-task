@@ -22,7 +22,7 @@ export default function Login() {
     }}
     ).then(function(response){
       console.log(response.data)
-      if(response.data==CLIENT+"/user/dashboard"){
+      if(response.data===CLIENT+"/user/dashboard"){
         window.location=response.data;
       }
     });}

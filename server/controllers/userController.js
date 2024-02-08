@@ -29,3 +29,18 @@ exports.newUser = async (req, res) => {
     console.log("failed");
   }
 };
+exports.userData = async (req, res) => {
+  try {
+    const validate = await User.findOne({ name: req.query.name });
+    console.log(validate);
+    if (validate != null) {
+      res.setHeader("Content-Type", "application/json");
+      res.send(validate);
+    } else {
+      res.setHeader("Content-Type", "text/plain");
+      res.end("Not found");
+    }
+  } catch {
+    console.log("failed");
+  }
+};
