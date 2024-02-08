@@ -1,0 +1,20 @@
+.project-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: rgb(249, 234, 212);
+    padding:2rem 0 2rem 0;
+}
+.project-title{
+    margin:20px auto;
+    font-size: 5rem;
+    text-align: center;
+}
+.project-description {
+    max-width: 300px; /* Adjust width as needed */
+    
+ 
+    overflow: hidden; /* Ensure image doesn't overflow */
+    margin: 20px;
+  }
