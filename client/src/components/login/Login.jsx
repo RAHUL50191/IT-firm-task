@@ -17,7 +17,8 @@ export default function Login() {
     {
       headers: {
       'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': '*' // You might need to adjust this based on your server's CORS configuration
+      'Access-Control-Allow-Origin': '*' ,
+      // You might need to adjust this based on your server's CORS configuration
     }}
     ).then(function(response){
       console.log(response.data)
