@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import './signup.css'
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { SERVER } from '../../config';
 export default function Signup() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -11,7 +12,7 @@ export default function Signup() {
      
     if(password===cpassword){
         console.log("password match")
-        axios.post('http://127.0.0.1:3001/user/signup', {
+        axios.post(SERVER+'/user/signup', {
           name: username,
           password: password
         });  

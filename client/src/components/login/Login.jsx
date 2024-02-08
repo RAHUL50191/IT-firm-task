@@ -10,10 +10,16 @@ export default function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
     try{
-    axios.post( SERVER+'/user/login', {
+    axios.post(SERVER+'/user/login', {
       name: username,
       password: password
-    }).then(function(response){
+    },
+    {
+      headers: {
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*' // You might need to adjust this based on your server's CORS configuration
+    }}
+    ).then(function(response){
       console.log(response.data)
       if(response.data==CLIENT+"/user/dashboard"){
         window.location=response.data;
