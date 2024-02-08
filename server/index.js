@@ -32,7 +32,8 @@ app.get("/api", (req, res) => {
   const path = `/api`;
   res.setHeader("Content-Type", "text/html");
   res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
-  res.end(`Hello! Go to item: <a href="${process.env.CLIENT}">client</a>`);
+  res.redirect(process.env.CLIENT);
+  // res.end(`Hello! Go to item: <a href="${process.env.CLIENT}">client</a>`);
 });
 app.use("/user", userRouter);
 app.listen(PORT, () => {
